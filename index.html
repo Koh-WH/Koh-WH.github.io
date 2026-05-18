@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koh Wen Hao | Robotics & CV Portfolio</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.473.0/lucide.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #0d1117; color: #e6edf3; }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 64px;
+            height: 4px;
+            background: #238636;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body class="flex">
+
+    <!-- Sidebar Navigation -->
+    <nav class="w-64 h-screen fixed left-0 top-0 bg-[#0d1117] border-r border-[#30363d] flex flex-col p-6 overflow-y-auto">
+        <div class="flex items-center gap-3 mb-10">
+            <img src="assets/images/profile_1.jpg" alt="Wen Hao" class="w-10 h-10 rounded-full object-cover border border-[#30363d]">
+            <span class="font-bold text-lg">Koh Wen Hao</span>
+        </div>
+
+        <div class="flex-1 space-y-4">
+            <a href="#bio" class="flex items-center gap-3 text-[#8b949e] hover:text-white transition-colors py-2">
+                <i data-lucide="user" class="w-5 h-5"></i>
+                <span class="font-medium">Bio</span>
+            </a>
+            <a href="#experience" class="flex items-center gap-3 text-[#8b949e] hover:text-white transition-colors py-2">
+                <i data-lucide="briefcase" class="w-5 h-5"></i>
+                <span class="font-medium">Experience</span>
+            </a>
+            
+            <div class="py-2">
+                <div class="flex items-center gap-3 text-[#e6edf3] mb-4">
+                    <i data-lucide="layout-grid" class="w-5 h-5"></i>
+                    <span class="font-medium text-white">Projects</span>
+                </div>
+                <div class="ml-4 pl-4 border-l border-[#30363d] space-y-3">
+                    <a href="humanoid-robot.html" class="block text-sm text-[#8b949e] hover:text-green-400">Humanoid Robot</a>
+                    <a href="simulation.html" class="block text-sm text-[#8b949e] hover:text-green-400">Simulation</a>
+                    <a href="computer-vision.html" class="block text-sm text-[#8b949e] hover:text-green-400">Computer Vision</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Social Links -->
+        <div class="mt-auto pt-6 border-t border-[#30363d] space-y-3">
+            <a href="mailto:kkohwenhao@gmail.com" class="flex items-center gap-3 text-sm text-[#8b949e] hover:text-white group">
+                <i data-lucide="mail" class="w-4 h-4"></i>
+                <span class="truncate">kkohwenhao@gmail.com</span>
+            </a>
+            <a href="https://www.linkedin.com/in/koh-wh/" target="_blank" class="flex items-center gap-3 text-sm text-[#8b949e] hover:text-white">
+                <i data-lucide="linkedin" class="w-4 h-4"></i>
+                <span>linkedin.com/in/koh-wh/</span>
+            </a>
+            <a href="https://github.com/Koh-WH" target="_blank" class="flex items-center gap-3 text-sm text-[#8b949e] hover:text-white">
+                <i data-lucide="github" class="w-4 h-4"></i>
+                <span>github.com/Koh-WH</span>
+            </a>
+            <a href="assets/doc/Resume.pdf" download class="flex items-center gap-3 text-sm text-green-500 hover:text-white mt-4 font-semibold">
+                <i data-lucide="file-text" class="w-4 h-4"></i>
+                <span>Download CV</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="ml-64 flex-1">
+        
+        <!-- Bio Section -->
+        <section id="bio" class="min-h-screen p-12 max-w-5xl mx-auto flex flex-col justify-center">
+            <div class="flex flex-col md:flex-row gap-12 items-start mb-12">
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl blur opacity-25 group-hover:opacity-40 transition items-center"></div>
+                    <img src="assets/images/profile.png" 
+                         alt="Koh Wen Hao" 
+                         class="relative w-64 h-64 rounded-xl object-cover border border-[#30363d] shadow-2xl">
+                </div>
+                
+                <div class="flex-1">
+                    <h1 class="text-5xl font-bold mb-4 tracking-tight">Koh Wen Hao</h1>
+                    <p class="text-2xl text-[#8b949e] font-light mb-8">Hii, here is some of the work I have learned and done!</p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <a href="mailto:kkohwenhao@gmail.com" class="flex items-center gap-3 p-3 bg-[#161b22] border border-[#30363d] rounded-lg hover:border-green-500 transition-all group lg:text-sm">
+                            <i data-lucide="mail" class="text-green-500 group-hover:scale-110 transition-transform"></i>
+                            <span class="truncate">kkohwenhao@gmail.com</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/koh-wh/" target="_blank" class="flex items-center gap-3 p-3 bg-[#161b22] border border-[#30363d] rounded-lg hover:border-green-500 transition-all group">
+                            <i data-lucide="linkedin" class="text-green-500 group-hover:scale-110 transition-transform"></i>
+                            <span class="truncate">linkedin.com/in/koh-wh/</span>
+                        </a>
+                        <a href="https://github.com/Koh-WH" target="_blank" class="flex items-center gap-3 p-3 bg-[#161b22] border border-[#30363d] rounded-lg hover:border-green-500 transition-all group">
+                            <i data-lucide="github" class="text-green-500 group-hover:scale-110 transition-transform"></i>
+                            <span class="truncate">github.com/Koh-WH</span>
+                        </a>
+                        <a href="assets/doc/Resume.pdf" download class="flex items-center gap-3 p-3 bg-green-600 hover:bg-green-500 text-white rounded-lg transition-all group">
+                            <i data-lucide="file-down" class="group-hover:translate-y-0.5 transition-transform"></i>
+                            <span class="font-bold">Download CV</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-[#161b22] border border-[#30363d] rounded-2xl p-8">
+                <h2 class="relative font-bold text-xl mb-8 section-title uppercase tracking-widest text-sm opacity-60">About</h2>
+                <p class="text-lg leading-relaxed text-[#8b949e]">
+                    While my professional path lies outside the industry, I actively pursue robotics development as an independent hobbyist. I am an adaptable, highly motivated learner who enjoys tackling intricate engineering challenges in a dynamic, collaborative space.
+                </p>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="p-12 max-w-5xl mx-auto py-24 scroll-mt-10">
+            <h2 class="relative font-bold text-3xl mb-16 section-title">Experience</h2>
+            <div class="space-y-12">
+                <div class="relative pl-8 border-l-2 border-[#30363d] py-2 hover:border-green-500 transition-colors group">
+                    <div class="absolute -left-[9px] top-6 w-4 h-4 bg-[#0d1117] border-2 border-[#30363d] rounded-full group-hover:border-green-500"></div>
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold">Perception Engineer Intern</h3>
+                        <span class="text-sm font-mono text-green-400 bg-green-900/20 px-2 py-1 rounded">Jun 2024 - Dec 2024</span>
+                    </div>
+                    <p class="text-green-500 font-medium mb-3">Aidrivers Singapore Pte Ltd</p>
+                    <p class="text-[#8b949e]">Focused on computer vision and perception software for autonomous vehicles.</p>
+                </div>
+                <!-- Add more experience items as needed -->
+            </div>
+        </section>
+
+        <!-- Projects Overview Section -->
+        <section id="projects" class="p-12 max-w-5xl mx-auto py-24 scroll-mt-10">
+            <h2 class="relative font-bold text-3xl mb-16 section-title">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Humanoid Robot Card -->
+                <a href="humanoid-robot.html" class="block bg-[#161b22] border border-[#30363d] rounded-xl p-8 hover:border-green-500 transition-all group">
+                    <div class="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center mb-6 text-green-500 group-hover:bg-green-500 group-hover:text-white transition-colors">
+                        <i data-lucide="bot" class="w-6 h-6"></i>
+                    </div>
+                    <div class="flex items-start mb-4">
+                        <h3 class="text-2xl font-bold">Humanoid Robot</h3>
+                    </div>
+                    <p class="text-[#8b949e] text-sm leading-relaxed mb-6">Projects in motion imitation, reinforcement learning, and more.</p>
+                    <div class="flex items-center gap-2 text-green-500 font-semibold group-hover:translate-x-2 transition-transform">
+                        <span>View Projects</span>
+                        <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                    </div>
+                </a>
+
+                <!-- Simulation Card -->
+                <a href="simulation.html" class="block bg-[#161b22] border border-[#30363d] rounded-xl p-8 hover:border-green-500 transition-all group">
+                    <div class="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center mb-6 text-green-500 group-hover:bg-green-500 group-hover:text-white transition-colors">
+                        <i data-lucide="cpu" class="w-6 h-6"></i>
+                    </div>
+                    <div class="flex items-start mb-4">
+                        <h3 class="text-2xl font-bold">Simulation</h3>
+                    </div>
+                    <p class="text-[#8b949e] text-sm leading-relaxed mb-6">Projects in digital twins, virtual tasks and more.</p>
+                    <div class="flex items-center gap-2 text-green-500 font-semibold group-hover:translate-x-2 transition-transform">
+                        <span>View Projects</span>
+                        <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                    </div>
+                </a>
+
+                <!-- Computer Vision Card -->
+                <a href="computer-vision.html" class="block bg-[#161b22] border border-[#30363d] rounded-xl p-8 hover:border-green-500 transition-all group">
+                    <div class="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center mb-6 text-green-500 group-hover:bg-green-500 group-hover:text-white transition-colors">
+                        <i data-lucide="eye" class="w-6 h-6"></i>
+                    </div>
+                    <div class="flex items-start mb-4">
+                        <h3 class="text-2xl font-bold">Computer Vision</h3>
+                    </div>
+                    <p class="text-[#8b949e] text-sm leading-relaxed mb-6">Projects in image processing, object detection, and more.</p>
+                    <div class="flex items-center gap-2 text-green-500 font-semibold group-hover:translate-x-2 transition-transform">
+                        <span>View Projects</span>
+                        <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                    </div>
+                </a>
+
+
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="p-12 text-center text-[#8b949e] text-sm border-t border-[#30363d] opacity-50">
+            <p>&copy; 2026 Koh Wen Hao | Hello!</p>
+        </footer>
+
+    </main>
+
+    <!-- Icons Initialization -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

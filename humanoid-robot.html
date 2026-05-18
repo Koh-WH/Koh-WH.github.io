@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Humanoid Robot Projects | Wen Hao</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.473.0/lucide.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #0d1117; color: #e6edf3; }
+        video::-webkit-media-controls-volume-control-container,
+        video::-webkit-media-controls-mute-button {
+            display: none !important;
+        }
+    </style>
+</head>
+<body class="flex">
+
+    <!-- Sidebar Navigation -->
+    <nav class="w-64 h-screen fixed left-0 top-0 bg-[#0d1117] border-r border-[#30363d] flex flex-col p-6 overflow-y-auto">
+        <div class="flex items-center gap-3 mb-10 cursor-pointer" onclick="location.href='index.html'">
+            <img src="assets/images/profile_1.jpg" alt="Wen Hao" class="w-10 h-10 rounded-full object-cover border border-[#30363d]">
+            <span class="font-bold text-lg">Wen Hao</span>
+        </div>
+
+        <div class="flex-1 space-y-4">
+            <a href="index.html#bio" class="flex items-center gap-3 text-[#8b949e] hover:text-white transition-colors py-2">
+                <i data-lucide="user" class="w-5 h-5"></i>
+                <span class="font-medium">Bio</span>
+            </a>
+            <a href="index.html#experience" class="flex items-center gap-3 text-[#8b949e] hover:text-white transition-colors py-2">
+                <i data-lucide="briefcase" class="w-5 h-5"></i>
+                <span class="font-medium">Experience</span>
+            </a>
+            
+            <div class="py-2">
+                <div class="flex items-center gap-3 text-[#e6edf3] mb-4">
+                    <i data-lucide="layout-grid" class="w-5 h-5"></i>
+                    <span class="font-medium text-white">Projects</span>
+                </div>
+                <div class="ml-4 pl-4 border-l border-green-500 space-y-3">
+                    <a href="computer-vision.html" class="block text-sm text-[#8b949e] hover:text-green-400">Computer Vision</a>
+                    <a href="simulation.html" class="block text-sm text-[#8b949e] hover:text-green-400">Simulation</a>
+                    <a href="humanoid-robot.html" class="block text-sm text-green-400 font-bold">Humanoid Robot</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Social Links -->
+        <div class="mt-auto pt-6 border-t border-[#30363d] space-y-3">
+            <a href="mailto:kkohwenhao@gmail.com" class="flex items-center gap-3 text-sm text-[#8b949e] hover:text-white group">
+                <i data-lucide="mail" class="w-4 h-4"></i>
+                <span class="truncate">kkohwenhao@gmail.com</span>
+            </a>
+            <a href="https://www.linkedin.com/in/koh-wh/" target="_blank" class="flex items-center gap-3 text-sm text-[#8b949e] hover:text-white">
+                <i data-lucide="linkedin" class="w-4 h-4"></i>
+                <span>linkedin.com/in/koh-wh/</span>
+            </a>
+            <a href="https://github.com/Koh-WH" target="_blank" class="flex items-center gap-3 text-sm text-[#8b949e] hover:text-white">
+                <i data-lucide="github" class="w-4 h-4"></i>
+                <span>github.com/Koh-WH</span>
+            </a>
+            <a href="assets/doc/Resume.pdf" download class="flex items-center gap-3 text-sm text-green-500 hover:text-white mt-4 font-semibold">
+                <i data-lucide="file-text" class="w-4 h-4"></i>
+                <span>Download CV</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="ml-64 flex-1">
+        
+        <section class="p-12 max-w-5xl mx-auto py-16">
+            <a href="index.html" class="inline-flex items-center gap-2 text-[#8b949e] hover:text-white mb-10 transition-colors group">
+                <i data-lucide="arrow-left" class="w-4 h-4 group-hover:-translate-x-1 transition-transform"></i>
+                <span>Back to Home</span>
+            </a>
+
+            <div class="mb-12">
+                <h1 class="text-4xl font-bold mb-4">Humanoid Robot Projects</h1>
+                <p class="text-lg text-[#8b949e]">Research and development in humanoid control, motion imitation, and reinforcement learning.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Vision vs IMU Motion Imitation -->
+                <div class="bg-[#161b22] border border-[#30363d] rounded-xl overflow-hidden group hover:border-green-500/50 transition-all md:col-span-2">
+                    <!-- Row 1: Shadowboxing (3 videos) -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 bg-[#0d1117] border-b border-[#30363d]">
+                        <div class="aspect-video relative border-r border-[#30363d] last:border-r-0">
+                             <video src="assets/videos/shadowingboxing_gvhmr.mp4" 
+                                    class="absolute inset-0 w-full h-full object-contain"
+                                    controls loop muted playsinline></video>
+                             <div class="absolute bottom-2 left-2 bg-black/60 px-2 py-1 rounded text-[10px] text-white">GVHMR Estimation</div>
+                        </div>
+                        <div class="aspect-video relative border-r border-[#30363d] last:border-r-0">
+                             <video src="assets/videos/shadowboxing_gmr.mp4" 
+                                    class="absolute inset-0 w-full h-full object-contain"
+                                    controls loop muted playsinline></video>
+                             <div class="absolute bottom-2 left-2 bg-black/60 px-2 py-1 rounded text-[10px] text-white">GMR Retargeting</div>
+                        </div>
+                        <div class="aspect-video relative">
+                             <video src="assets/videos/shadowboxing_imitated.mp4" 
+                                    class="absolute inset-0 w-full h-full object-contain"
+                                    controls loop muted playsinline></video>
+                             <div class="absolute bottom-2 left-2 bg-black/60 px-2 py-1 rounded text-[10px] text-white">Imitated Motion</div>
+                        </div>
+                    </div>
+                    <!-- Row 2: Starjumps & Squats (4 videos) -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 bg-[#0d1117]">
+                        <div class="aspect-video relative border-r border-[#30363d]">
+                             <video src="assets/videos/starjumps_inputvideo.MP4" 
+                                    class="absolute inset-0 w-full h-full object-contain"
+                                    controls loop muted playsinline></video>
+                             <div class="absolute bottom-2 left-2 bg-black/60 px-2 py-1 rounded text-[10px] text-white">Starjumps Input</div>
+                        </div>
+                        <div class="aspect-video relative border-r border-[#30363d]">
+                             <video src="assets/videos/starjumps_rebocap.mp4" 
+                                    class="absolute inset-0 w-full h-full object-contain"
+                                    controls loop muted playsinline></video>
+                             <div class="absolute bottom-2 left-2 bg-black/60 px-2 py-1 rounded text-[10px] text-white">Starjumps ReboCap</div>
+                        </div>
+                        <div class="aspect-video relative border-r border-[#30363d]">
+                             <video src="assets/videos/squats_inputvideo.MP4" 
+                                    class="absolute inset-0 w-full h-full object-contain"
+                                    controls loop muted playsinline></video>
+                             <div class="absolute bottom-2 left-2 bg-black/60 px-2 py-1 rounded text-[10px] text-white">Squats Input</div>
+                        </div>
+                        <div class="aspect-video relative">
+                             <video src="assets/videos/squats_rebocap.mp4" 
+                                    class="absolute inset-0 w-full h-full object-contain"
+                                    controls loop muted playsinline></video>
+                             <div class="absolute bottom-2 left-2 bg-black/60 px-2 py-1 rounded text-[10px] text-white">Squats ReboCap</div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Vision vs IMU Motion Imitation</h3>
+                            <span class="text-[10px] font-mono text-[#8b949e] border border-[#30363d] px-2 py-0.5 rounded">FYP | Sep 2025 – May 2026</span>
+                        </div>
+                        <p class="text-[#8b949e] text-sm leading-relaxed">Designed and evaluated two distinct imitation learning pipelines—vision-based and inertial-based—to train the Unitree G1 humanoid robot on human movements. The vision pipeline processes standard .mp4 videos using GVHMR framework for pose estimation, while the inertial pipeline utilizes raw motion capture data from ReboCap IMU sensors. Both modalities employ the General Motion Retargeting (GMR) framework for kinematic mapping and train parallelized policies within the MJLabs framework. The project culminates in a comprehensive comparative analysis evaluating the tradeoffs in tracking accuracy, training robustness, and efficiency between vision and IMU-driven data streams.</p>
+                    </div>
+                </div>
+
+                <!-- Velocity Keyboard Control -->
+                <div class="bg-[#161b22] border border-[#30363d] rounded-xl overflow-hidden group hover:border-green-500/50 transition-all md:col-span-2">
+                    <div class="grid grid-cols-1 md:grid-cols-2 bg-[#0d1117]">
+                        <div class="aspect-video relative border-r border-[#30363d]">
+                             <video src="assets/videos/velocity_flat.mp4" 
+                                    class="absolute inset-0 w-full h-full object-contain"
+                                    controls loop muted playsinline></video>
+                             <div class="absolute bottom-2 left-2 bg-black/60 px-2 py-1 rounded text-[10px] text-white">Flat Terrain</div>
+                        </div>
+                        <div class="aspect-video relative">
+                             <video src="assets/videos/velocity_rough.mp4" 
+                                    class="absolute inset-0 w-full h-full object-contain"
+                                    controls loop muted playsinline></video>
+                             <div class="absolute bottom-2 left-2 bg-black/60 px-2 py-1 rounded text-[10px] text-white">Rough Terrain</div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Velocity Keyboard Control</h3>
+                            <span class="text-[10px] font-mono text-[#8b949e] border border-[#30363d] px-2 py-0.5 rounded">FYP | Sep 2025 – May 2026</span>
+                        </div>
+                        <p class="text-[#8b949e] text-sm leading-relaxed">Trained a Velocity control policy in MJLabs and developed custom control scripts to enable the robot to be controlled via the keyboard. Includes acceleration control and dynamic turning while in motion.</p>
+                    </div>
+                </div>
+
+                <!-- Reinforcement Learning -->
+                <div class="bg-[#161b22] border border-[#30363d] rounded-xl overflow-hidden group hover:border-green-500/50 transition-all md:col-span-2">
+                    <div class="grid grid-cols-1 md:grid-cols-2 bg-[#0d1117]">
+                        <div class="aspect-video relative border-r border-[#30363d]">
+                             <video src="assets/videos/Squatting.MOV" 
+                                    class="absolute inset-0 w-full h-full object-contain"
+                                    controls loop muted playsinline></video>
+                        </div>
+                        <div class="aspect-video relative">
+                             <video src="assets/videos/Squatting_1.MOV" 
+                                    class="absolute inset-0 w-full h-full object-contain"
+                                    controls loop muted playsinline></video>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Reinforcement Learning</h3>
+                            <span class="text-[10px] font-mono text-[#8b949e] border border-[#30363d] px-2 py-0.5 rounded">FYP | Sep 2025 – May 2026</span>
+                        </div>
+                        <p class="text-[#8b949e] text-sm leading-relaxed">Trained and simulate reinforcement learning policies for multiple actions on the Unitree G1 in IsaacGym by designing and tuning custom reward functions. Developed a push-resistant policy for a 29-DoF G1 humanoid through incremental learning and iterative optimisation of reward structures and training parameters.</p>
+                    </div>
+                </div>
+
+                <!-- Teleoperation -->
+                <div class="bg-[#161b22] border border-[#30363d] rounded-xl overflow-hidden group hover:border-green-500/50 transition-all md:col-span-2">
+                    <div class="aspect-video bg-[#0d1117] relative">
+                         <video src="assets/videos/teleop.MOV" 
+                                class="absolute inset-0 w-full h-full object-contain"
+                                controls loop muted playsinline></video>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Teleoperation</h3>
+                            <span class="text-[10px] font-mono text-[#8b949e] border border-[#30363d] px-2 py-0.5 rounded">FYP | Sep 2025 – May 2026</span>
+                        </div>
+                        <p class="text-[#8b949e] text-sm leading-relaxed">Developed a teleoperation system for the Unitree G1 in MuJoCo using ReboCap IMU sensors for motion capture input, with remote communication enabled through ngrok for real-time control. The setup operated without physics simulation for direct motion replay, while also supporting integration of trained reinforcement learning policies to enable robot operation within physics-enabled environments.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Fullscreen Media Viewer -->
+    <div id="mediaModal" class="fixed inset-0 z-50 hidden bg-black/95 flex items-center justify-center p-4 md:p-10 backdrop-blur-sm cursor-pointer" onclick="closeModal()">
+        <button class="absolute top-6 right-6 text-white/50 hover:text-white transition-colors p-2" onclick="closeModal()">
+            <i data-lucide="x" class="w-8 h-8"></i>
+        </button>
+        <div id="modalContent" class="max-w-full max-h-full flex items-center justify-center" onclick="event.stopPropagation()">
+            <!-- Media will be inserted here -->
+        </div>
+    </div>
+
+    <!-- Icons Initialization -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+
+        function openModal(element) {
+            const modal = document.getElementById('mediaModal');
+            const content = document.getElementById('modalContent');
+            content.innerHTML = '';
+            
+            let clone;
+            if (element.tagName === 'VIDEO') {
+                clone = element.cloneNode(true);
+                clone.controls = true;
+                clone.muted = true;
+                clone.volume = 0;
+                
+                // Prevent unmuting
+                clone.addEventListener('volumechange', () => {
+                    if (!clone.muted || clone.volume > 0) {
+                        clone.muted = true;
+                        clone.volume = 0;
+                    }
+                });
+
+                clone.classList.remove('absolute', 'inset-0');
+                clone.classList.add('max-w-full', 'max-h-[90vh]', 'rounded-lg', 'shadow-2xl');
+                clone.play();
+            } else {
+                clone = element.cloneNode(true);
+                clone.classList.remove('absolute', 'inset-0', 'object-cover', 'object-contain');
+                clone.classList.add('max-w-full', 'max-h-[90vh]', 'object-contain', 'rounded-lg', 'shadow-2xl');
+            }
+            
+            content.appendChild(clone);
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('mediaModal');
+            const content = document.getElementById('modalContent');
+            const video = content.querySelector('video');
+            if (video) video.pause();
+            
+            modal.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        // Add click listeners to all media elements
+        document.querySelectorAll('img, video').forEach(el => {
+            if (el.closest('main')) { // Only for project media
+                el.classList.add('cursor-zoom-in');
+                el.addEventListener('click', (e) => {
+                    openModal(el);
+                });
+            }
+        });
+
+        // Enforce silence on all videos
+        document.querySelectorAll('video').forEach(video => {
+            video.volume = 0;
+            video.muted = true;
+            video.addEventListener('volumechange', () => {
+                if (!video.muted || video.volume > 0) {
+                    video.muted = true;
+                    video.volume = 0;
+                }
+            });
+        });
+
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+        });
+    </script>
+</body>
+</html>
